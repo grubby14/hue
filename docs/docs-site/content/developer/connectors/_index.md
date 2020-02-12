@@ -35,9 +35,13 @@ If the built-in HiveServer2 (Hive, Impala, Spark SQL), RDBMS (MySQL, PostgreSQL,
 
 #### JDBC
 
-With the JDBC proxy, query editor with any JDBC compatible database. View the [JDBC connector](https://github.com/cloudera/hue/blob/master/desktop/libs/notebook/src/notebook/connectors/jdbc.py).
+With the JDBC proxy, the query editor can connect to any JDBC compatible database. View the [JDBC connector](https://github.com/cloudera/hue/blob/master/desktop/libs/notebook/src/notebook/connectors/jdbc.py) for more details. This is the only Java code piece in Hue.
 
-**Note** In the long term, SqlAlchemy is prefered as more "Python native".
+**Note** SqlAlchemy is prefered as more "Python native".
+
+By default it won't be built without setting the `BUILD_DB_PROXY` flag, e.g.:
+
+    export BUILD_DB_PROXY=true make install
 
 
 ### Jobs
